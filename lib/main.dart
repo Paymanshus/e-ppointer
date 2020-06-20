@@ -3,6 +3,7 @@ import 'package:eppointer/pages/profile.dart';
 import 'package:flutter/material.dart';
 
 import 'pages/appointments_home.dart';
+import 'pages/saved.dart';
 
 import 'UI/nav_bar.dart';
 
@@ -18,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   final List<Widget> _children = [
     AppointmentsHome(),
     DiscoverPage(),
-    ProfilePage(),
+    SavedPage(),
   ];
 
   tapped(int tappedIndex) {

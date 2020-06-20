@@ -4,6 +4,10 @@ class MiniCards extends StatelessWidget {
   final cardStart = const Color(0xffEF473A);
   final cardEnd = const Color(0xffCB2D3E);
 
+  String miniCardsText;
+
+  MiniCards(this.miniCardsText);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,7 +37,7 @@ class MiniCards extends StatelessWidget {
             size: 40.0,
           ),
           Text(
-            'Groceries',
+            miniCardsText.toString(),
             style: TextStyle(
               fontFamily: 'Open Sans',
               fontSize: 16,

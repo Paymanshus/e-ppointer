@@ -1,4 +1,7 @@
+import 'package:eppointer/main.dart';
 import 'package:flutter/material.dart';
+
+import 'appointments_home.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -27,13 +30,19 @@ class _ProfilePageState extends State<ProfilePage> {
                   ],
                 ),
               ),
-              Positioned(
-                top: 20,
-                left: 10,
-                child: Icon(
-                  Icons.arrow_left,
-                  color: Colors.white,
-                ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 10.0, vertical: 40.0),
+                child: Row(children: <Widget>[
+                  IconButton(
+                    icon: Icon(Icons.arrow_back),
+                    color: Colors.white,
+                    iconSize: 30,
+                    //onPressed: () => Navigator.push(context,
+                    //    MaterialPageRoute(builder: (context) => MyApp())),
+                    onPressed: () => Navigator.pop(context),
+                  ),
+                ]),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 80.0),

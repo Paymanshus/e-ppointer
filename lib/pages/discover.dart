@@ -9,6 +9,18 @@ class DiscoverPage extends StatefulWidget {
 }
 
 class _DiscoverPageState extends State<DiscoverPage> {
+  var categories = [
+    "Groceries",
+    "Clothing",
+    "Chemist",
+    "Groceries",
+    "Clothing",
+    "Chemist",
+    "Groceries",
+    "Clothing",
+    "Chemist"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Column(children: <Widget>[
@@ -43,23 +55,14 @@ class _DiscoverPageState extends State<DiscoverPage> {
                 ),
               ),
               GridView.count(
-                  shrinkWrap: true,
-                  crossAxisCount: 3,
-                  childAspectRatio: 1,
-                  padding: const EdgeInsets.all(40.0),
-                  mainAxisSpacing: 10.0,
-                  crossAxisSpacing: 10.0,
-                  children: <Widget>[
-                    MiniCards(),
-                    MiniCards(),
-                    MiniCards(),
-                    MiniCards(),
-                    MiniCards(),
-                    MiniCards(),
-                    MiniCards(),
-                    MiniCards(),
-                    MiniCards(),
-                  ]),
+                shrinkWrap: true,
+                crossAxisCount: 3,
+                childAspectRatio: 1,
+                padding: const EdgeInsets.all(40.0),
+                mainAxisSpacing: 10.0,
+                crossAxisSpacing: 10.0,
+                children: categories.map((title) => MiniCards(title)).toList(),
+              ),
             ],
           ),
         ),

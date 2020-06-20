@@ -1,28 +1,15 @@
-import 'package:eppointer/UI/appointments_list.dart';
-import 'package:eppointer/UI/mini_cards.dart';
+import 'package:eppointer/UI/stores_list.dart';
+import 'package:eppointer/pages/profile.dart';
 import 'package:flutter/material.dart';
 
-import 'package:eppointer/models/appointment_model.dart';
-import 'package:eppointer/models/store_model.dart';
-
-import 'profile.dart';
-import 'discover.dart';
-
-class AppointmentsHome extends StatefulWidget {
-  //AppointmentsHome({Key key}) : super(key: key);
+class SavedPage extends StatefulWidget {
+  SavedPage({Key key}) : super(key: key);
 
   @override
-  _AppointmentsHomeState createState() => _AppointmentsHomeState();
+  _SavedPageState createState() => _SavedPageState();
 }
 
-class _AppointmentsHomeState extends State<AppointmentsHome> {
-  int _currentTab = 0;
-  final List<Widget> _children = [
-    AppointmentsHome(),
-    DiscoverPage(),
-    ProfilePage(),
-  ];
-
+class _SavedPageState extends State<SavedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -125,7 +112,7 @@ class _AppointmentsHomeState extends State<AppointmentsHome> {
                   ),
                 ]),
               ),
-              AppointmentsList(),
+              StoresList(),
             ],
           ),
         ),
