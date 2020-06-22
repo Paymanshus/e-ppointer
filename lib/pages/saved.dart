@@ -3,8 +3,6 @@ import 'package:eppointer/pages/profile.dart';
 import 'package:flutter/material.dart';
 
 class SavedPage extends StatefulWidget {
-  SavedPage({Key key}) : super(key: key);
-
   @override
   _SavedPageState createState() => _SavedPageState();
 }
@@ -80,24 +78,25 @@ class _SavedPageState extends State<SavedPage> {
                   ],
                 ),
               ),
-              Row(
+              /*Row(
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 17, vertical: 10),
                     child: Text(
-                      'Appointments',
+                      'Saved Places',
                       style: TextStyle(fontSize: 22),
                     ),
                   ),
                 ],
               ),
+              */
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 17, vertical: 10),
+                    const EdgeInsets.symmetric(horizontal: 17, vertical: 15),
                 child: Row(children: <Widget>[
                   Text(
-                    'Past Bookings',
+                    'Saved Places',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                   ),
                   Spacer(flex: 5),
@@ -105,8 +104,8 @@ class _SavedPageState extends State<SavedPage> {
                     child: GestureDetector(
                       onTap: () => print('See All'),
                       child: Icon(
-                        Icons.arrow_right,
-                        size: 35,
+                        Icons.arrow_forward,
+                        size: 30,
                       ),
                     ),
                   ),

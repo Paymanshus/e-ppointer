@@ -1,7 +1,7 @@
-import 'package:eppointer/pages/discover.dart';
 import 'package:eppointer/pages/profile.dart';
 import 'package:flutter/material.dart';
 
+import 'pages/discover.dart';
 import 'pages/appointments_home.dart';
 import 'pages/saved.dart';
 
@@ -79,7 +79,7 @@ class _MyAppState extends State<MyApp> {
               ),
               BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.person,
+                  Icons.favorite,
                   size: 30,
                 ),
                 title: SizedBox.shrink(),

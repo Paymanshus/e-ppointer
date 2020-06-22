@@ -79,7 +79,7 @@ class AppointmentsList extends StatelessWidget {
                     ),
                   ],
                 ),
-              )
+              ),
             ],
           );
         },

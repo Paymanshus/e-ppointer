@@ -29,7 +29,7 @@ class _AppointmentsHomeState extends State<AppointmentsHome> {
       body: SafeArea(
         bottom: false,
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 50),
+          padding: EdgeInsets.only(top: 50),
           child: Column(
             children: <Widget>[
               Padding(
@@ -118,8 +118,8 @@ class _AppointmentsHomeState extends State<AppointmentsHome> {
                     child: GestureDetector(
                       onTap: () => print('See All'),
                       child: Icon(
-                        Icons.arrow_right,
-                        size: 35,
+                        Icons.arrow_forward,
+                        size: 30,
                       ),
                     ),
                   ),

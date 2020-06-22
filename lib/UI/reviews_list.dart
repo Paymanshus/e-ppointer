@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:eppointer/models/store_model.dart';
+import 'package:eppointer/models/review_model.dart';
 
-import 'package:eppointer/models/store_model.dart';
-
-class StoresList extends StatelessWidget {
+class ReviewsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -55,14 +54,6 @@ class StoresList extends StatelessWidget {
                                 Text(
                                   store.category,
                                 ),
-                                Icon(
-                                  Icons.directions,
-                                  color: Theme.of(context).accentColor,
-                                ),
-                                Text(
-                                  store.distance.toString(),
-                                ),
-                                Text(' km'),
                               ],
                             ),
                           ),
