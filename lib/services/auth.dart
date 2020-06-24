@@ -1,9 +1,10 @@
 import 'package:eppointer/models/user.dart';
+import 'package:eppointer/services/database.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
  class AuthService{
 
-   final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   //Create a user object based on firebase user
   User _userFromFirebaseUser( FirebaseUser user) {
@@ -22,8 +23,14 @@ import 'package:flutter/material.dart';
     try {
       AuthResult result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
       FirebaseUser user = result.user;
+
+      //Create a new document for the user with this UID
+      await DatabaseService(uid: user.uid).updateUserData('John Doe', email, 1234567890);
+      print('Data added to database');
+
       return _userFromFirebaseUser(user);
-    } catch (e) { 
+    } 
+    catch (e) { 
       print(e.toString());
       return null;
     }
