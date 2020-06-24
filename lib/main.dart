@@ -34,8 +34,8 @@ class _MyAppState extends State<MyApp> {
   }*/
 
   final List<Widget> _children = [
-    //Register(),
-    SignIn(),
+    Register(),
+    //SignIn(),
     AppointmentsHome(),
     DiscoverPage(),
     SavedPage(),
