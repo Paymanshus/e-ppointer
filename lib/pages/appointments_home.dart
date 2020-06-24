@@ -12,10 +12,10 @@ class AppointmentsHome extends StatefulWidget {
   //AppointmentsHome({Key key}) : super(key: key);
 
   @override
-  _AppointmentsHomeState createState() => _AppointmentsHomeState();
+  AppointmentsHomeState createState() => AppointmentsHomeState();
 }
 
-class _AppointmentsHomeState extends State<AppointmentsHome> {
+class AppointmentsHomeState extends State<AppointmentsHome> {
   int _currentTab = 0;
   final List<Widget> _children = [
     AppointmentsHome(),

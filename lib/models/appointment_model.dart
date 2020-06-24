@@ -21,6 +21,7 @@ class Appointment {
 
   */
 
+
 List<Appointment> appointments = [
   Appointment(
     storeName: 'Satya Vijay Store',
