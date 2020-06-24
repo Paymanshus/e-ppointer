@@ -8,9 +8,9 @@ class ReviewsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.builder(
-        itemCount: stores.length,
+        itemCount: reviews.length,
         itemBuilder: (BuildContext context, int index) {
-          Store store = stores[index];
+          Review review = reviews[index];
           return Stack(
             children: <Widget>[
               Container(
@@ -27,19 +27,19 @@ class ReviewsList extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Image(
-                        image: AssetImage(store.storeImg),
+                        image: AssetImage(review.storeImg),
                         height: 50,
                         width: 50,
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 15),
+                      padding: const EdgeInsets.only(top: 15),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Row(children: <Widget>[
                             Text(
-                              store.storeName,
+                              review.storeName,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 16,
@@ -51,8 +51,14 @@ class ReviewsList extends StatelessWidget {
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                Text(
-                                  store.category,
+                                Container(
+                                  width:
+                                      (MediaQuery.of(context).size.width * 0.6),
+                                  height: 30,
+                                  child: Text(
+                                    review.reviewDesc,
+                                    softWrap: true,
+                                  ),
                                 ),
                               ],
                             ),
@@ -74,7 +80,7 @@ class ReviewsList extends StatelessWidget {
                       color: const Color(0xFFF24333),
                     ),
                     Text(
-                      store.review.toString(),
+                      review.reviewRating.toString(),
                     ),
                   ],
                 ),
