@@ -16,12 +16,12 @@ class AppointmentsHome extends StatefulWidget {
 }
 
 class AppointmentsHomeState extends State<AppointmentsHome> {
-  int _currentTab = 0;
-  final List<Widget> _children = [
-    AppointmentsHome(),
-    DiscoverPage(),
-    ProfilePage(),
-  ];
+  // int _currentTab = 0;
+  // final List<Widget> _children = [
+  //   AppointmentsHome(),
+  //   DiscoverPage(),
+  //   ProfilePage(),
+  // ];
 
   @override
   Widget build(BuildContext context) {
