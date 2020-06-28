@@ -2,6 +2,7 @@ import 'package:eppointer/pages/home.dart';
 import 'package:eppointer/pages/login.dart';
 import 'package:eppointer/pages/profile.dart';
 import 'package:eppointer/pages/register.dart';
+import 'package:eppointer/pages/store_page.dart';
 import 'package:flutter/material.dart';
 import 'pages/login_new.dart';
 
@@ -51,6 +52,9 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    final primaryColor = 0xFFF24333;
+    final secondaryColor = 0xFFBF3528;
+    final accentColor = 0xFFF4877D;
     /*if(showSignIn){
       return SignIn(toggleView: toggleView);
     }
@@ -68,10 +72,12 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primarySwatch: Colors.red,
+          primaryColor: Color(0xFFF24333),
+          primaryColorDark: Color(0xFFBF3528),
           accentColor: Color(0xFFF4877D),
           visualDensity: VisualDensity.adaptivePlatformDensity,
           fontFamily: 'Open Sans'),
-      home: SigninScreen(),
+      home: StorePage(),
     );
   }
 }
