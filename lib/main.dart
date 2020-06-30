@@ -1,7 +1,10 @@
+import 'package:eppointer/pages/home.dart';
 import 'package:eppointer/pages/login.dart';
 import 'package:eppointer/pages/profile.dart';
 import 'package:eppointer/pages/register.dart';
+import 'package:eppointer/pages/store_page.dart';
 import 'package:flutter/material.dart';
+import 'pages/login_new.dart';
 
 import 'pages/discover.dart';
 import 'pages/appointments_home.dart';
@@ -20,7 +23,7 @@ class _MyAppState extends State<MyApp> {
   int _currentTab = 0;
   bool showSignIn = true;
 
-  void toggleView(){
+  void toggleView() {
     setState(() => showSignIn = !showSignIn);
   }
 
@@ -34,8 +37,9 @@ class _MyAppState extends State<MyApp> {
   }*/
 
   final List<Widget> _children = [
-    Register(),
+    //Register(),
     //SignIn(),
+    //SigninScreen(),
     AppointmentsHome(),
     DiscoverPage(),
     SavedPage(),
@@ -49,6 +53,9 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    final primaryColor = 0xFFF24333;
+    final secondaryColor = 0xFFBF3528;
+    final accentColor = 0xFFF4877D;
     /*if(showSignIn){
       return SignIn(toggleView: toggleView);
     }
@@ -66,59 +73,12 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primarySwatch: Colors.red,
+          primaryColor: Color(0xFFF24333),
+          primaryColorDark: Color(0xFFBF3528),
           accentColor: Color(0xFFF4877D),
           visualDensity: VisualDensity.adaptivePlatformDensity,
           fontFamily: 'Open Sans'),
-      home: Scaffold(
-        body: _children[_currentTab],
-        bottomNavigationBar: new Theme(
-          data: Theme.of(context).copyWith(
-            primaryColor: const Color(0xFFBF3528),
-            disabledColor: Theme.of(context).accentColor,
-          ),
-          child: BottomNavigationBar(
-            currentIndex: _currentTab,
-            onTap: tapped,
-            /*
-            onTap: (int value) {
-              setState(() {
-                _currentTab = value;
-              });
-            },
-            */
-            items: [
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.library_books,
-                  size: 30,
-                ),
-                /*
-                activeIcon: Icon(
-                  Icons.library_books,
-                  size: 30,
-                  color: const Color(0xFFBF3528),
-                ),
-                */
-                title: SizedBox.shrink(),
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.search,
-                  size: 30,
-                ),
-                title: SizedBox.shrink(),
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.favorite,
-                  size: 30,
-                ),
-                title: SizedBox.shrink(),
-              ),
-            ],
-          ),
-        ),
-      ),
+      home: SigninScreen(),
     );
   }
 }

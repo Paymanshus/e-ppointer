@@ -1,4 +1,5 @@
 import 'package:eppointer/UI/appointments_list.dart';
+import 'package:eppointer/UI/stores_list.dart';
 import 'package:flutter/material.dart';
 
 import 'package:eppointer/UI/mini_cards.dart';
